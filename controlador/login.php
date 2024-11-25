@@ -17,7 +17,6 @@ if (!empty($_POST["btningresar"])) {
         require   '../../modelo/conexion.php';
 
 
-
         // Prepara la consulta
         $sql = $conexion->prepare("SELECT * FROM Usuarios WHERE usuarme = ? AND password = ?");
         $sql->bind_param("ss", $usuario, $password);
